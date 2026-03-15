@@ -38,6 +38,7 @@ public class FindSubArrayWithTargetSum {
             }
             if (map.containsKey(sum - target)) {
                 System.out.println(map);
+                //we are adding +1 here ,because if we remove that difference from sum we get target so we remove index
                 return new int[]{map.get(sum - target) + 1, i};
             } else {
                 map.put(sum, i);
